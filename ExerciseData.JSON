@@ -1,0 +1,122 @@
+[
+    {
+        "id":"000",
+        "name":"Downward Dog",
+        "desc":"This famous pose works to strengthen the core and improve circulation. A deep hamstring stretch spreads to the eintire body aiding in flexibility. To perform this pose, start in a plank with your hands slightly lower than normal. Extend and lengthen your spine, simultaneously pressing through the palms of your hands and balls of your feet. Pull your pelvis up toward the ceiling, using the triceps in your upper arms to help stabilize your form. Hold this position and breathe deeply for the duration of the exercise.",
+        "duration_secs":60,
+        "vals":[4,6,4,7,2,3,8,5,4,6]
+    },
+    {
+        "id":"001",
+        "name":"Child's Pose",
+        "desc":"Child's Pose desc",
+        "duration_secs":90,
+        "vals":[6,7,4,8,7,1,5,2,6,4]
+    },
+    {
+        "id":"002",
+        "name":"Mountain",
+        "desc":"Mountain desc",
+        "duration_secs":30,
+        "vals":[2,4,4,3,1,3,1,1,7,8]
+    },
+    {
+        "id":"003",
+        "name":"Standing Forward Fold",
+        "desc":"Standing forward fold desc",
+        "duration_secs":45,
+        "vals":[2,2,5,1,1,4,9,6,5,8]
+    },
+    {
+        "id":"004",
+        "name":"Cat and Cow",
+        "desc":"Cat and Cow desc",
+        "duration_secs":30,
+        "vals":[7,9,5,6,5,1,2,2,6,5]
+    },
+    {
+        "id":"005",
+        "name":"Happy Baby",
+        "desc":"Happy Baby desc",
+        "duration_secs":30,
+        "vals":[1,2,6,3,9,1,6,2,4,6]
+    },
+    {
+        "id":"006",
+        "name":"Bridge",
+        "desc":"Bridge desc",
+        "duration_secs":45,
+        "vals":[5,3,5,2,7,3,5,7,6,7]
+    },
+    {
+        "id":"007",
+        "name":"Plank",
+        "desc":"Plank desc",
+        "duration_secs":45,
+        "vals":[2,4,3,7,2,5,2,9,4,6]
+    },
+    {
+        "id":"008",
+        "name":"Warrior I",
+        "desc":"This famous pose works to strengthen the core and improve circulation. A deep hamstring stretch spreads to the eintire body aiding in flexibility. Start in a plank and stretch your butt to the sky as your hands and heels stay flat on the ground.",
+        "duration_secs":120,
+        "vals":[0,0,0,0,0,0,0,0,0,0]
+    },
+    {
+        "id":"009",
+        "name":"Warrior II",
+        "desc":"This famous pose works to strengthen the core and improve circulation. A deep hamstring stretch spreads to the eintire body aiding in flexibility. Start in a plank and stretch your butt to the sky as your hands and heels stay flat on the ground.",
+        "duration_secs":120,
+        "vals":[0,0,0,0,0,0,0,0,0,0]
+    },
+    {
+        "id":"010",
+        "name":"Warrior III",
+        "desc":"This famous pose works to strengthen the core and improve circulation. A deep hamstring stretch spreads to the eintire body aiding in flexibility. Start in a plank and stretch your butt to the sky as your hands and heels stay flat on the ground.",
+        "duration_secs":120,
+        "vals":[0,0,0,0,0,0,0,0,0,0]
+    },
+    {
+        "id":"011",
+        "name":"Hero",
+        "desc":"This famous pose works to strengthen the core and improve circulation. A deep hamstring stretch spreads to the eintire body aiding in flexibility. Start in a plank and stretch your butt to the sky as your hands and heels stay flat on the ground.",
+        "duration_secs":120,
+        "vals":[0,0,0,0,0,0,0,0,0,0]
+    },
+    {
+        "id":"012",
+        "name":"Thread the Needle",
+        "desc":"This famous pose works to strengthen the core and improve circulation. A deep hamstring stretch spreads to the eintire body aiding in flexibility. Start in a plank and stretch your butt to the sky as your hands and heels stay flat on the ground.",
+        "duration_secs":120,
+        "vals":[0,0,0,0,0,0,0,0,0,0]
+    },
+    {
+        "id":"013",
+        "name":"Pigeon",
+        "desc":"This famous pose works to strengthen the core and improve circulation. A deep hamstring stretch spreads to the eintire body aiding in flexibility. Start in a plank and stretch your butt to the sky as your hands and heels stay flat on the ground.",
+        "duration_secs":120,
+        "vals":[0,0,0,0,0,0,0,0,0,0]
+    },
+    {
+        "id":"014",
+        "name":"Tree",
+        "desc":"This famous pose works to strengthen the core and improve circulation. A deep hamstring stretch spreads to the eintire body aiding in flexibility. Start in a plank and stretch your butt to the sky as your hands and heels stay flat on the ground.",
+        "duration_secs":120,
+        "vals":[0,0,0,0,0,0,0,0,0,0]
+    },
+    {
+        "id":"015",
+        "name":"Cobra",
+        "desc":"This famous pose works to strengthen the core and improve circulation. A deep hamstring stretch spreads to the eintire body aiding in flexibility. Start in a plank and stretch your butt to the sky as your hands and heels stay flat on the ground.",
+        "duration_secs":45,
+        "vals":[0,0,0,0,0,0,0,0,0,0]
+    },
+    {
+        "id":"016",
+        "name":"Camel",
+        "desc":"This famous pose works to strengthen the core and improve circulation. A deep hamstring stretch spreads to the eintire body aiding in flexibility. Start in a plank and stretch your butt to the sky as your hands and heels stay flat on the ground.",
+        "duration_secs":45,
+        "vals":[0,0,0,0,0,0,0,0,0,0]
+    }
+]
+
