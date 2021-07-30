@@ -7,7 +7,8 @@
 
 import SwiftUI
 
-struct History: View {
+struct Insights: View {
+
     var body: some View {
         ZStack {
             Color("lightNeutral")
@@ -37,6 +38,6 @@ struct History: View {
 
 struct History_Previews: PreviewProvider {
     static var previews: some View {
-        History()
+        Insights()
     }
 }
