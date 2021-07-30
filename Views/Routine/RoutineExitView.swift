@@ -13,37 +13,44 @@ struct RoutineExitView: View {
     
     @ObservedObject var routineVM: RoutineViewModel
     
-    @State var notes: String?
+    @State var notes = ""
+    @State var placeholder = "Today's routine felt..."
+    
+    init(routineVM: RoutineViewModel) {
+        self.routineVM = routineVM
+        
+        UITextView.appearance().backgroundColor = .clear
+    }
     
     var body: some View {
         NavigationView {
             ScrollView {
                 VStack {
                     VStack(spacing: 0) {
-                        Text("Completed")
+                        Text("Finishing Thoughts")
                             .fontWeight(.semibold)
-                            .font(.title3)
+                            .font(.title2)
                             .padding(.horizontal)
                             .padding(.top)
                             .padding(.bottom, 8)
                         Divider()
                         
-                        ForEach(routineVM.exercises.indices) { index in
-                            if routineVM.completed[index] {
-                                HStack {
-                                    Image(systemName: "circle.fill")
-                                        .scaleEffect(0.5)
-                                        .foregroundColor(Color("primary"))
-                                    Text(routineVM.exercises[index].name)
-                                    
-                                    Spacer()
-                                    
-                                    Image(systemName: "checkmark.circle.fill")
-                                        .foregroundColor(Color("primary"))
-                                    
-                                }
+                        ZStack(alignment: .leading) {
+                            if notes.isEmpty {
+                                TextEditor(text: $placeholder)
+                                    .font(.body)
+                                    .padding(.vertical)
+                                    .foregroundColor(.gray)
+                                    .disabled(true)
                             }
+                            
+                            TextEditor(text: $notes)
+                                .font(.body)
+                                .padding(.vertical)
+//                                .opacity(notes.isEmpty ? 0.25 : 1)
+                                
                         }
+                        .padding()
                         
                     }
                     .background(
@@ -56,27 +63,37 @@ struct RoutineExitView: View {
                     .padding(.horizontal)
                     
                     VStack(spacing: 0) {
-                        Text("Not Completed")
+                        Text("Completed")
                             .fontWeight(.semibold)
-                            .font(.title3)
+                            .font(.title2)
                             .padding(.horizontal)
                             .padding(.top)
                             .padding(.bottom, 8)
                         Divider()
                         
-                        ForEach(routineVM.exercises.indices) { index in
-                            if !routineVM.completed[index] {
-                                HStack {
-                                    Image(systemName: "circle.fill")
-                                        .scaleEffect(0.5)
-                                        .foregroundColor(Color("primary"))
-                                    Text(routineVM.exercises[index].name)
-                                    
-                                    Spacer()
+                        VStack {
+                            ForEach(routineVM.exercises.indices) { index in
+                                if routineVM.completed[index] {
+                                    HStack {
+                                        Image(systemName: "circle.fill")
+                                            .scaleEffect(0.5)
+                                            .foregroundColor(Color("primary"))
+                                        Text(routineVM.exercises[index].name)
+                                            .fontWeight(.bold)
+                                            .font(.title3)
+                                        Spacer()
+                                        Image(systemName: "checkmark.circle.fill")
+                                            .foregroundColor(Color("primary"))
+                                            
+                                    }
+                                    if index != routineVM.exercises.count - 1 {
+                                        Divider()
+                                    }
                                     
                                 }
                             }
                         }
+                        .padding()
                         
                     }
                     .background(
@@ -87,6 +104,47 @@ struct RoutineExitView: View {
 
                     )
                     .padding()
+                    
+                    VStack(spacing: 9) {
+                        Text("Not Completed")
+                            .fontWeight(.semibold)
+                            .font(.title2)
+                            .padding(.horizontal)
+                            .padding(.top)
+                            .padding(.bottom, 8)
+                        Divider()
+                        
+                        VStack {
+                            ForEach(routineVM.exercises.indices) { index in
+                                if !routineVM.completed[index] {
+                                    HStack {
+                                        Image(systemName: "circle.fill")
+                                            .scaleEffect(0.5)
+                                            .foregroundColor(Color("primary"))
+                                        Text(routineVM.exercises[index].name)
+                                            .fontWeight(.bold)
+                                            .font(.title3)
+                                        Spacer()
+                                    }
+                                    if index != routineVM.exercises.count - 1 {
+                                        Divider()
+                                    }
+                                }
+                            }
+                        }
+                        .padding()
+                        
+                        
+                    }
+                    
+                    .background(
+                        Color.white
+                            .cornerRadius(15)
+                            .shadow(color: .gray.opacity(0.5), radius: 30)
+                            .animation(.spring())
+
+                    )
+                    .padding(.horizontal)
                 }
                 .foregroundColor(Color("darkNeutral"))
             }
@@ -102,7 +160,7 @@ struct RoutineExitView: View {
                             CompletedRoutine(
                                 exercises: routineVM.exercises,
                                 completed: routineVM.completed,
-                                notes: notes,
+                                notes: notes.isEmpty ? nil : notes,
                                 uid: Auth.auth().currentUser?.uid
                             )
                         //write data to routines
@@ -110,12 +168,13 @@ struct RoutineExitView: View {
                         //change view
                         homeVM.home = true
                     }) {
-                        Text("Exit")
+                        Text("Finish")
                             .padding()
                     }
             )
         }
         .navigationBarHidden(true)
+        .accentColor(Color("primary"))
     }
 }
 

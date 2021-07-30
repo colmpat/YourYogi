@@ -9,7 +9,11 @@ import Foundation
 import FirebaseFirestore
 import FirebaseFirestoreSwift
 
-struct CompletedRoutine: Codable {
+struct CompletedRoutine: Codable, Hashable {
+    static func == (lhs: CompletedRoutine, rhs: CompletedRoutine) -> Bool {
+        return lhs.dateCompleted == rhs.dateCompleted
+    }
+    
     let exercises: [Exercise]
     let completed: [Bool]
     let notes: String?

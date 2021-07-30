@@ -24,8 +24,8 @@ struct HomeView: View {
                         switch self.homeVM.currentTab {
                         case .today:
                             Today().environmentObject(homeVM)
-                        case .focuses:
-                            Text("Focuses")
+                        case .insights:
+                            Insights()
                         case .settings:
                             Text("Settings")
                         case .you:

@@ -11,7 +11,9 @@ import AuthenticationServices
 struct SignInWithAppleButton: UIViewRepresentable {
     
     func makeUIView(context: Context) -> ASAuthorizationAppleIDButton {
-        return ASAuthorizationAppleIDButton(type: .signIn, style: .black)
+        let button = ASAuthorizationAppleIDButton(type: .signIn, style: .black)
+        button.cornerRadius = 15
+        return button
     }
     func updateUIView(_ uiView: ASAuthorizationAppleIDButton, context: Context) {
     }

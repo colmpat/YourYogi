@@ -39,7 +39,7 @@ class HomeViewModel: ObservableObject {
 }
 
 enum Tab : String, CaseIterable {
-    case today, focuses, settings, you
+    case today, insights, settings, you
 }
 
 extension Date {
